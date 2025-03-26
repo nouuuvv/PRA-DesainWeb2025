@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="form">
+            <h1>Form HTML & CSS</h1>
+            <form action="">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+                
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                
+                <label>Jenis Kelamin:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Laki-laki</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Perempuan</label>
+                </div>
+                
+                <label>Hobi:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="bike" name="hobby" value="bike">
+                    <label for="bike">I have a bike</label>
+                    
+                    <input type="checkbox" id="car" name="hobby" value="car">
+                    <label for="car">I have a car</label>
+                </div>
+                
+                <label for="cars">Choose a car:</label>
+                <select id="cars" name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+                
+                <label for="file">Upload File:</label>
+                <input type="file" id="file" name="file">
+                
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
