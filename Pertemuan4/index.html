@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Novan</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/gojo2.png" type="image/png" />
+
+    <!-- Font Awesome untuk icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">Novan Ramadani</div>
+      <nav>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#proyek">Proyek</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+          <button id="darkModeToggle" class="dark-toggle">🌙</button>
+
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="beranda">
+      <h1>Halo, Saya Novan 👋</h1>
+      <p>Mahasiswa MI semester 2 yang suka ngoding dan desain.</p>
+      <a href="#proyek" class="btn">Lihat Proyek</a>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="section">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya sedang mempelajari HTML, CSS, dan JavaScript. Web ini adalah hasil
+        latihan untuk membuat website yang responsif dan modern.
+      </p>
+    </section>
+
+    <!-- Proyek -->
+    <section id="proyek" class="section">
+      <h2>Proyek Saya</h2>
+      <div class="projects">
+        <div class="project-card">
+          <img src="img/jogjakarta.jpg" alt="Wisata Yogyakarta" />
+          <h3>Website Wisata Yogyakarta</h3>
+          <p>
+            One-page website tentang budaya Yogyakarta dengan carousel dan
+            scroll animation.
+          </p>
+          <a href="#" target="_blank">Lihat Proyek</a>
+        </div>
+        <div class="project-card">
+          <img src="img/pesawat.jpg" alt="Form Tiket" />
+          <h3>Form Pemesanan Tiket</h3>
+          <p>
+            Landing page form pemesanan dengan fitur kode promo otomatis dan
+            hitung total harga.
+          </p>
+          <a href="#" target="_blank">Lihat Proyek</a>
+        </div>
+        <div class="project-card">
+          <img src="img/sekolah.jpeg" alt="E-learning" />
+          <h3>Website E-learning</h3>
+          <p>
+            Fitur penilaian otomatis setelah dosen menyetujui tugas yang
+            dikumpulkan oleh mahasiswa.
+          </p>
+          <a href="#" target="_blank">Lihat Proyek</a>
+        </div>
+        <div class="project-card">
+          <img src="img/keuangan.webp" alt="Keuangan Sekolah" />
+          <h3>SI Keuangan Sekolah</h3>
+          <p>
+            Website Laravel dengan login, dashboard admin, CRUD dan integrasi
+            pembayaran Midtrans.
+          </p>
+          <a href="#" target="_blank">Lihat Proyek</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="section">
+      <h2>Kontak Saya</h2>
+      <div class="contact-info">
+        <a href="mailto:nouuuvv@gmail.com"
+          ><i class="fas fa-envelope"></i> nouuu@gmail.com</a
+        >
+        <a href="https://instagram.com/nouuuvv" target="_blank"
+          ><i class="fab fa-instagram"></i> @nouuuvv</a
+        >
+        <a href="https://github.com/nouuuvv" target="_blank"
+          ><i class="fab fa-github"></i> github.com/nouuuvv</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Novan Ramadani. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            setTimeout(() => {
+            preloader.style.opacity = "0";
+            setTimeout(() => preloader.style.display = "none", 500);
+            }, 1000); 
+        });
+    </script>
+    
+
+    </script>
+  </body>
+</html>
