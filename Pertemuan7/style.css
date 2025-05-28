@@ -1,0 +1,193 @@
+:root {
+    --cream: #fef6e4;
+    --moka: #c7a17a;
+    --choco: #5c3d2e;
+    --white: #ffffff;
+    --dark: #2f2f2f;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "intro"
+      "highlights"
+      "footer";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: var(--white);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--moka);
+  }
+  
+  .header h1 {
+    margin: 0;
+    color: var(--choco);
+  }
+  
+  .nav {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: var(--moka);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: var(--choco);
+  }
+  
+  .intro {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .intro-text {
+    padding: 30px;
+    margin-left: 50px;
+  }
+  
+  .intro-text h2 {
+    margin-top: 0;
+    color: var(--moka);
+    font-size: 2rem;
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--choco);
+    color: var(--white);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--moka);
+    color: var(--dark);
+  }
+  
+  .intro-img img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: auto;
+  }
+  
+  .highlights {
+    grid-area: highlights;
+    padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-left: 6px solid var(--moka);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    color: var(--choco);
+  }
+  
+  .footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--white);
+    border-top: 1px solid var(--moka);
+    font-size: 0.9rem;
+  }
+/* Animasi fade in */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Terapkan animasi saat load */
+  .intro,
+  .highlights .card,
+  .header,
+  .footer {
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  /* Delay animasi bertahap */
+  .intro {
+    animation-delay: 0.2s;
+  }
+  .highlights .card:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  .highlights .card:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .highlights .card:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+  
+  /* Hover pada card */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Hover pada tombol */
+  .btn-primary {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  .btn-primary:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Tambahan transisi menu */
+  .nav a {
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  .nav a:hover {
+    transform: translateY(-2px);
+  }
+        
